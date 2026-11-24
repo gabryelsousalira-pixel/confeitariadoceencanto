@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confeitaria artesanal</title>
+  <meta name="description" content="Bolos, doces e tortas artesanais feitos sob encomenda.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFF5F2">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Confeitaria artesanal">
+  <meta property="og:description" content="Bolos, doces e tortas artesanais feitos sob encomenda.">
+  <meta property="og:image" content="">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Figtree:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json" id="ldjson"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo" id="topo">
+    <div class="cont topo__in">
+      <a class="marca" href="#inicio" data-nome></a>
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#encomendas">Encomendas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="btn btn--cheio btn--sm topo__cta" data-wa>Encomendar</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="cont hero__grid">
+        <div class="hero__txt">
+          <h1 data-nome></h1>
+          <p class="hero__slogan" id="slogan"></p>
+          <p class="hero__desc" id="descricao"></p>
+          <div class="acoes">
+            <a class="btn btn--cheio" data-wa>Faça sua encomenda</a>
+            <a class="btn btn--linha" href="#produtos">Ver produtos</a>
+          </div>
+          <p class="hero__nota" id="antecedencia"></p>
+        </div>
+        <div class="hero__foto">
+          <div class="arco"><img id="heroImg" width="800" height="1000" fetchpriority="high" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="produtos">
+      <div class="cont">
+        <div class="sec__cab revelar">
+          <h2>Nossos produtos</h2>
+          <p>Tudo é feito sob encomenda, com ingredientes selecionados. Escolha uma categoria e peça pelo WhatsApp.</p>
+        </div>
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar produtos por categoria"></div>
+        <div class="produtos revelar" id="produtosGrid"></div>
+      </div>
+    </section>
+
+    <section class="sec sec--suave" id="sobre">
+      <div class="cont sobre">
+        <div class="arco sobre__foto revelar"><img id="sobreImg" width="800" height="1000" loading="lazy" decoding="async" alt=""></div>
+        <div class="sobre__txt revelar">
+          <h2 id="sobreTitulo"></h2>
+          <div id="sobreTextos"></div>
+          <ul class="destaques" id="sobreDestaques"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="galeria">
+      <div class="cont">
+        <div class="sec__cab revelar">
+          <h2>Galeria</h2>
+          <p>Um pouco do que sai do nosso forno e da nossa bancada.</p>
+        </div>
+        <div class="galeria revelar" id="galeriaGrid"></div>
+      </div>
+    </section>
+
+    <section class="sec sec--escura" id="encomendas">
+      <div class="cont enc">
+        <div class="enc__txt revelar">
+          <h2 id="encTitulo"></h2>
+          <p id="encTexto"></p>
+          <ol class="passos">
+            <li>Conte o que você precisa no formulário.</li>
+            <li>O WhatsApp abre com a mensagem pronta. É só enviar.</li>
+            <li>Respondemos com o orçamento e confirmamos a data.</li>
+          </ol>
+          <a class="btn btn--cheio" data-wa>Falar direto no WhatsApp</a>
+        </div>
+        <form class="enc__form revelar" id="formEnc">
+          <label for="fNome">Seu nome</label>
+          <input id="fNome" name="nome" type="text" autocomplete="name" required>
+          <label for="fProduto">O que você quer encomendar?</label>
+          <select id="fProduto" name="produto" required></select>
+          <div class="form-linha">
+            <div>
+              <label for="fQtd">Quantidade ou tamanho</label>
+              <input id="fQtd" name="qtd" type="text" placeholder="Ex.: 50 unidades">
+            </div>
+            <div>
+              <label for="fData">Data desejada</label>
+              <input id="fData" name="data" type="date">
+            </div>
+          </div>
+          <label for="fObs">Detalhes (sabor, tema, alergias)</label>
+          <textarea id="fObs" name="obs" rows="3"></textarea>
+          <button class="btn btn--cheio btn--bloco" type="submit">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="sec" id="contato">
+      <div class="cont contato">
+        <div class="contato__txt revelar">
+          <h2>Vamos conversar?</h2>
+          <p>Tire dúvidas, peça um orçamento ou combine a retirada. Respondemos o mais rápido possível.</p>
+          <div class="acoes">
+            <a class="btn btn--cheio" data-wa>Chamar no WhatsApp</a>
+            <a class="btn btn--linha" id="igBtn" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+        <dl class="contato__lista revelar" id="listaContato"></dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="cont rodape__in">
+      <p><strong data-nome></strong> &copy; <span id="ano"></span>. Todos os direitos reservados.</p>
+      <p id="credito"></p>
+    </div>
+  </footer>
+
+  <a class="wa-flutuante" data-wa aria-label="Chamar no WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke-width="2.6"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
